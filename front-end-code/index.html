@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+
+	<link rel="stylesheet"href="./swiper/swiper-bundle.min.css"/>
+	
+	<link href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.8.0/css/all.min.css" rel="stylesheet">
+	
+	<link rel="stylesheet" href="./layui/css/layui.css"  media="all">
+	<link rel="stylesheet" href="./layui/css/modules/layer/default/layer.css">
+	<link rel="stylesheet" href="./layui/css/modules/laydate/default/laydate.css">
+	<link rel="stylesheet" href="./layui/css/modules/code.css">
+	<script src="layui/layui.js"></script>
+    <title>网抑云评论</title>
+	
+</head>
+<body>
+    <!-- <img src="img/bg.jpg" alt="" class="wave"> -->
+	<div class="kuang">
+		
+		<!-- content -->
+		<div class="top1">
+			
+			<!-- Swiper -->
+			<div class="swiper mySwiper">
+				<div class="swiper-wrapper">
+					<!-- part 1 -->
+					<div class="swiper-slide">
+						<div class="top0">
+							<div class="shlogo"></div>
+							<div id="sou">
+								<input id="song" type="text" placeholder="请输入歌名"/>
+								<button id="start" class="layui-btn layui-btn-radius" type="button">
+									搜索
+									<i class="fab fa-sistrix"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+					<!-- part 2 -->
+					<div class="swiper-slide">
+						<div class="bei">
+							<div class="prev">
+								<button id="prev_one" type="button" class="layui-btn"><i class="layui-icon"></i></button>
+							</div>
+							<iframe id="res" src="" frameborder="0"></iframe>
+						</div>
+					
+						
+					</div>
+					<!-- part 3 -->
+					<div class="swiper-slide">
+						<div class="bei">
+							<div class="prev">
+								<button id="prev_two" type="button" class="layui-btn"><i class="layui-icon"></i></button>
+							</div>
+							<iframe id="com" src="" frameborder="0"></iframe>
+						</div>
+						
+					</div>
+					
+					
+					<!-- part end -->
+				</div>
+				
+				<!-- <div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div> -->
+			</div>
+			
+		</div>
+	</div>
+
+
+	
+	<footer>
+		<a href="https://teemos.justwalking.cn" target="_blank" class="copyright">&copy; Teemos</a>
+	</footer>
+	    <script src="js/jquery.min.js" type="text/javascript"></script>
+
+	<script src="js/index.js" type="text/javascript"></script>
+	
+	<!-- Swiper JS -->
+	<script src="./swiper/swiper-bundle.min.js"></script>
+
+	<!-- Initialize Swiper -->
+	<script>
+	   var swiper = new Swiper(".mySwiper", {
+					// loop:true,
+					initialSlide: 0,
+					noSwipingSelector: 'div',
+					speed:600,
+
+			
+			   navigation: {
+						 nextEl: "#other",
+					   },
+					   
+			 });
+			$('#prev_one').click(function(){
+				swiper.slideTo(0, 600, false);//切换到第一个slide，速度为1秒
+			  })
+			 $('#prev_two').click(function(){
+				 swiper.slideTo(1, 600, false);//切换到第一个slide，速度为1秒
+			   })
+	</script>
+	
+	<style>
+		.bei{
+			background: rgba(255,255,255,0.7);
+		}
+	</style>
+</body>
+</html>
